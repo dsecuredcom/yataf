@@ -52,6 +52,7 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 			{Type: "Credentials", Name: "Secret indicator with .", Matcher: `(?i)['|"][a-zA-Z-\.]+\.(access-key|password|apikey|secret|access_key|secret-key|pwd|passwd|appsecret|app_secret)['|"](\s*?):(\s*?)['|"][\S\s]+[\S]+['|"](\s*?)`},
 			{Type: "Credentials", Name: "Secret indicator with _", Matcher: `(?i)['|"][a-zA-Z-\.]+_(access-key|password|apikey|secret|access_key|secret-key|pwd|passwd|appsecret|app_secret)['|"](\s*?):(\s*?)['|"][\S\s]+[\S]+['|"](\s*?)`},
 			{Type: "Credentials", Name: "Credentials in URL", Matcher: `(?i)['|"](http|https|ftp|postgresql|smtp|ssh|mongodb|redis|mysql|mssql|jdbc|odbc)://[a-zA-Z0-9\_-]+:.*@[a-z0-9]+`},
+			{Type: "Credentials", Name: "Credentials in module.exports", Matcher: `(?im)module.exports\s*?=\s*?.*{\s*?.*?(admin|secret|password|credentials).*?\s*?}`},
 
 			{Type: "Urls-Paths", Name: "Cloudinary", Matcher: `cloudinary://.*`},
 			{Type: "Urls-Paths", Name: "Firebase URL", Matcher: `[a-zA-Z0-9-]+\.firebaseio\.com`},
