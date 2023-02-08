@@ -1,0 +1,7 @@
+return {loanData,'credentials':{'UserName': '!"saddfdasfsadmin1' ,'Password':'$/\§%&()=Password1'}};
+
+return {loanData,'credentials':{'UserName':'!"saddfdasfsadmin2','Password':'$Password1'}};
+
+return {loanData,'credentials':{"Username" : '!"saddfdasfsadmin3' ,'Password': 'Password@12'}};
+
+return {loanData,'credentials':{"Username" : '!"saddfdasfsadmin4' ,'Password': 'Password@12!'}};
