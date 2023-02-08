@@ -70,6 +70,7 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 			{Type: "Urls-Paths", Name: "Urls and paths #12", Matcher: `(?i)fetch\(['|"]\/.*?['|"],`},
 			{Type: "Urls-Paths", Name: "Urls and paths #13", Matcher: `(?im)['|"][a-zA-Z0-9_\.]+['|"](\s*?):(\s*?)['|"](http[s]?:|//|\./).*?['|"]`},
 			{Type: "Urls-Paths", Name: "Urls and paths #14", Matcher: `(?im)(axios|jquery|instance|\$)\.(get|post|delete)\(.*?\)(\s*?)\.then\(function`},
+			{Type: "Urls-Paths", Name: "Urls and paths #15", Matcher: `(?im)\/(api|v1|v2|v3|alpha|apis)\/[a-zA-Z0-9_\-\/\?\${}\.]{3,75}`},
 		},
 	}
 
