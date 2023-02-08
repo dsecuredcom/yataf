@@ -27,7 +27,7 @@ func AnalyzeContent(Content string, Types []string) _struct.Results {
 		CleanedExtractedResults := make([]string, 0)
 
 		for _, Extraction := range RegExResults {
-			if Contains(NegativeExtractions, Extraction) {
+			if Matches(NegativeExtractions, Extraction) {
 				continue
 			}
 
@@ -53,10 +53,14 @@ func AnalyzeContent(Content string, Types []string) _struct.Results {
 	return Results
 }
 
-func Contains(Extractions []string, Extraction string) bool {
-	for _, NegativeExtraction := range Extractions {
+func Matches(Extractions map[string]string, Extraction string) bool {
+	for NegativeExtraction, Treatment := range Extractions {
 
-		if strings.TrimSpace(NegativeExtraction) == strings.TrimSpace(Extraction) {
+		if Treatment == "equals" && strings.TrimSpace(NegativeExtraction) == strings.TrimSpace(Extraction) {
+			return true
+		}
+
+		if Treatment == "contains" && strings.Contains(strings.TrimSpace(Extraction), strings.TrimSpace(NegativeExtraction)) {
 			return true
 		}
 	}
