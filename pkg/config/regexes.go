@@ -55,7 +55,7 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 
 			{Type: "Urls-Paths", Name: "Cloudinary", Matcher: `cloudinary://.*`},
 			{Type: "Urls-Paths", Name: "Firebase URL", Matcher: `[a-zA-Z0-9-]+\.firebaseio\.com`},
-			{Type: "Urls-Paths", Name: "Urls and paths #1", Matcher: `(?i)\.(get|post|fetch|patch|delete|option|put|ajax)\((\s*?)['|"][a-zA-Z0-9-_\/:\?]['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #1", Matcher: `(?i)[a-zA-Z]\.(get|post|fetch|patch|delete|option|put|ajax)\((\s*?)['|"][a-zA-Z0-9-_\/:\?]['|"]`},
 			{Type: "Urls-Paths", Name: "Urls and paths #2", Matcher: `(?i)<(a|script).*(href|src)=['|"]\/[a-zA-Z0-9]+.*['|"].*>.*<\/(a|script)>`},
 			{Type: "Urls-Paths", Name: "Urls and paths #3", Matcher: `(?i)<(a|script).*href=['|"]http[s]?:\/\/[a-zA-Z0-9\.\-\/?=]+['|"].*>.*<\/(a|script)>`},
 			{Type: "Urls-Paths", Name: "Urls and paths #4", Matcher: `(?i)<(a|script).*href=['|"]\/\/[a-zA-Z0-9\.\-\/?=]+['|"].*>.*<\/(a|script)>`},
