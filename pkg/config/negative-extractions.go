@@ -9,6 +9,8 @@ func GetNegativeExtractions() map[string]string {
 		">detectmobilebrowsers.com<":         "contains",
 		"/mobile-detect.js":                  "contains",
 		"http://mysite.com/":                 "contains",
+		"github.com/indutny/elliptic":        "contains",
+		"registry.npmjs.org/elliptic/-/":     "contains",
 	}
 
 }
