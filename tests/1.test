@@ -12,3 +12,17 @@ Authorization:    Basic XS//._123=
 
 
  "damian-access-key":"yc"
+var password = "secretW0rd"
+
+ const xi_sdApi = "https://xxxxx.apple.com/sd-sd-api";
+  const xi_sdApi = "/xxxxx.apple.com/sd-sd-api";
+  const xi_sdApi = "./xxxxx.apple.com/sd-sd-api";
+
+  new WebSocket(`https://asdprod.sd.com/event?user=${e}`,
+
+
+  return this.http.get("http://12.201.7342:9004/testmaintenance"
+
+return this.http.get(xi_fvApi + "/production-line-schedule/" + r + "/event",
+
+return this.http.get("/production-line-schedule/" + r + "/event",

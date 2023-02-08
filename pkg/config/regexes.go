@@ -9,6 +9,7 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 	Config := _struct.RegExConfig{
 		Elements: []_struct.RegEx{
 			{Type: "Credentials", Name: "User/Pass Case#1", Matcher: `(?im)['|"](user|username|mail|email|access|ident|login)['|"](\s*?):(\s*?)['|"].*?['|"](\s*?),(\s*?)['|"](pass|password|passwordpassive|authkey|credentials|access_key|apikey|secret|access)['|"](\s*?):(\s*?)['|"].*?['|"]`},
+			{Type: "Credentials", Name: "JS const/var", Matcher: `(?i)(var|const|let)(\s*?)(pass|password|passwordpassive|authkey|credentials|access_key|apikey|secret|access)(\s*?)(=|:)(\s*?)['|"].*?['|"]`},
 			{Type: "Credentials", Name: "Slack Token", Matcher: `(xox[p|b|o|a]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})`},
 			{Type: "Credentials", Name: "RSA private key", Matcher: `-----BEGIN RSA PRIVATE KEY-----`},
 			{Type: "Credentials", Name: "SSH (DSA) private key", Matcher: `-----BEGIN DSA PRIVATE KEY-----`},
@@ -64,13 +65,21 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 			{Type: "Urls-Paths", Name: "Urls and paths #6", Matcher: `(?i)(url|path|file)['|"](\s*?):(\s*?)['|"].*?['|"]`},
 			{Type: "Urls-Paths", Name: "Urls and paths #8", Matcher: `(?im)url: ['|"]\/.*?['|"]`},
 			{Type: "Urls-Paths", Name: "Urls and paths #9", Matcher: `(?im)url: [a-zA-Z0-9]+(\s*?)\+(\s*?)['|"]\/.*?['|"]`},
-			{Type: "Urls-Paths", Name: "Urls and paths #10", Matcher: `(?im)(axios|jquery|instance|\$).(get|post|delete|put|ajax)\(['|"]\/.*?['|"]`},
-			{Type: "Urls-Paths", Name: "Urls and paths #11", Matcher: `(?im)(axios|jquery|instance|\$).(get|post|delete|put|ajax)\([a-zA-Z0-9._]+,`},
+			{Type: "Urls-Paths", Name: "Urls and paths #10", Matcher: `(?im)(axios|jquery|instance|http|\$).(get|post|delete|put|ajax)\(['|"](https|http|\/|\.\/).*?['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #11", Matcher: `(?im)(axios|jquery|instance|http|\$).(get|post|delete|put|ajax)\([a-zA-Z0-9._]+,`},
 			{Type: "Urls-Paths", Name: "Urls and paths #12", Matcher: `(?i)fetch\(['|"]\/.*?['|"],`},
 			{Type: "Urls-Paths", Name: "Urls and paths #13", Matcher: `(?im)['|"][a-zA-Z0-9_\.]+['|"](\s*?):(\s*?)['|"](http[s]?:|//|\./).*?['|"]`},
-			{Type: "Urls-Paths", Name: "Urls and paths #14", Matcher: `(?im)(axios|jquery|instance|\$)\.(get|post|delete)\(.*?\)(\s*?)\.then\(function`},
+			{Type: "Urls-Paths", Name: "Urls and paths #14", Matcher: `(?im)(axios|jquery|instance|http|\$)\.(get|post|delete)\(.*?\)(\s*?)\.then\(function`},
 			{Type: "Urls-Paths", Name: "Urls and paths #15", Matcher: `(?im)\/(api|v1|v2|v3|alpha|apis)\/[a-zA-Z0-9_\-\/\?\${}\.]{3,75}`},
 			{Type: "Urls-Paths", Name: "Urls and paths #16", Matcher: `(?im)(req|request)\.open\(['|"](GET|POST)['|"],\s*?['|"]\/.*?['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #17", Matcher: `(?i)(const|let|var)\s*?[a-zA-Z0-9_]+\s*?=\s*?['|"](https|http|\/|\.\/).*?['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #18", Matcher: `(?i)new Websocket\(['|"](https|http|\/|\.\/).*?['|"]\)`},
+			// @TODO: In JS one can also use backticks instead of " or '... unfortunately it is not possible
+			//		  to escape backticks (`) within backticks... The only solution is to use double quotes like below
+			//		  new WebSocket(`ws://localhost:8080`) vs new WebSocket("ws://localhost:8080")
+			{Type: "Urls-Paths", Name: "Urls and paths #19", Matcher: "(?i)new WebSocket\\(`.*?`"}, // <--- see difference here
+			{Type: "Urls-Paths", Name: "Urls and paths #20", Matcher: `(?im)(axios|jquery|instance|http|\$).(get|post|delete|put|ajax)\([a-zA-Z0-9_]+\s*?\+\s*?['|"].*?['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #21", Matcher: `(?im)(axios|jquery|instance|http|\$).(get|post|delete|put|ajax)\(['|"]\/.*?\s*?\+\s*?[a-zA-Z0-9_]+\s*?\+\s*?['|"]`},
 		},
 	}
 
