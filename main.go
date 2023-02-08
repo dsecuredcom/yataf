@@ -41,7 +41,7 @@ func main() {
 			fmt.Printf("\033[32m[%d]\033[0m\033[36m[DataExtracted (limited to %d chars)]\033[0m\r\n%s\n", Key, Arguments.CharLimit, DataExtracted[:Arguments.CharLimit])
 
 		}
-		fmt.Printf("\n")
+
 	}
 
 }
