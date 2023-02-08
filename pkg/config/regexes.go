@@ -65,10 +65,11 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 			{Type: "Urls-Paths", Name: "Urls and paths #6", Matcher: `(?i)(url|path|file)['|"](\s*?):(\s*?)['|"].*?['|"]`},
 			{Type: "Urls-Paths", Name: "Urls and paths #8", Matcher: `(?im)url: ['|"]\/.*?['|"]`},
 			{Type: "Urls-Paths", Name: "Urls and paths #9", Matcher: `(?im)url: [a-zA-Z0-9]+(\s*?)\+(\s*?)['|"]\/.*?['|"]`},
-			{Type: "Urls-Paths", Name: "Urls and paths #10", Matcher: `(?im)(axios|jquery|\$).(get|post|delete|put|ajax)\(['|"]\/.*?['|"]`},
-			{Type: "Urls-Paths", Name: "Urls and paths #11", Matcher: `(?im)(axios|jquery|\$).(get|post|delete|put|ajax)\([a-zA-Z0-9._]+,`},
+			{Type: "Urls-Paths", Name: "Urls and paths #10", Matcher: `(?im)(axios|jquery|instance|\$).(get|post|delete|put|ajax)\(['|"]\/.*?['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #11", Matcher: `(?im)(axios|jquery|instance|\$).(get|post|delete|put|ajax)\([a-zA-Z0-9._]+,`},
 			{Type: "Urls-Paths", Name: "Urls and paths #12", Matcher: `(?i)fetch\(['|"]\/.*?['|"],`},
 			{Type: "Urls-Paths", Name: "Urls and paths #13", Matcher: `(?im)['|"][a-zA-Z0-9_\.]+['|"](\s*?):(\s*?)['|"](http[s]?:|//|\./).*?['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #14", Matcher: `(?im)(axios|jquery|instance|\$)\.(get|post|delete)\(.*?\)(\s*?)\.then\(function`},
 		},
 	}
 
