@@ -17,7 +17,7 @@ func TestAnalyzeContent(t *testing.T) {
 
 	for File, ExpectedResults := range Config {
 		Content := fetch.GetContentOfLocalFile(File)
-		Analyzed := AnalyzeContent(Content, "")
+		Analyzed := AnalyzeContent(Content, []string{"all"})
 
 		ResultsCount := ExpectedResults["Results"]
 		ExtractionsCount := ExpectedResults["Extractions"]
