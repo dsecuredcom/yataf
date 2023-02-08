@@ -23,7 +23,7 @@ func main() {
 	Results := analyze.AnalyzeContent(Content, Arguments.Types)
 
 	if len(Results.Result) == 0 {
-		fmt.Println("\033[31m[i] No results found\033[0m\n")
+		fmt.Printf("\033[31m[i] No results found\033[0m\n")
 		os.Exit(1)
 	}
 
@@ -41,7 +41,7 @@ func main() {
 			fmt.Printf("\033[32m[%d]\033[0m\033[36m[DataExtracted (limited to %d chars)]\033[0m\r\n%s\n", Key, Arguments.CharLimit, DataExtracted[:Arguments.CharLimit])
 
 		}
-
+		fmt.Printf("\n")
 	}
 
 }
