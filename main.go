@@ -33,12 +33,16 @@ func main() {
 		fmt.Printf("\033[34m[i] Name: %s\033[0m\n", Result.RegEx.Name)
 		fmt.Printf("\033[36m[i] RegEx:\033[0m %s\n", Result.RegEx.Matcher)
 		for Key, DataExtracted := range Result.DataExtracted {
+			AddLine := "\r\n"
+			if Result.RegEx.Type == "Urls-Paths" || len(DataExtracted) < 150 {
+				AddLine = " "
+			}
 			if len(DataExtracted) < Arguments.CharLimit {
-				fmt.Printf("\033[32m[%d]\033[0m\033[36m[DataExtracted]\033[0m\n%s\n", Key, DataExtracted)
+				fmt.Printf("\033[32m[%d]\033[0m\033[36m[DataExtracted]\033[0m%s%s\n", Key, AddLine, DataExtracted)
 				continue
 			}
 
-			fmt.Printf("\033[32m[%d]\033[0m\033[36m[DataExtracted (limited to %d chars)]\033[0m\r\n%s\n", Key, Arguments.CharLimit, DataExtracted[:Arguments.CharLimit])
+			fmt.Printf("\033[32m[%d]\033[0m\033[36m[DataExtracted (limited to %d chars)]\033[0m%s%s\n", Key, Arguments.CharLimit, AddLine, DataExtracted[:Arguments.CharLimit])
 
 		}
 		fmt.Printf("\n")
