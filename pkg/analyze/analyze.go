@@ -1,8 +1,8 @@
 package analyze
 
 import (
-	"github.com/Damian89/FileAnalyzer/pkg/config"
-	_struct "github.com/Damian89/FileAnalyzer/pkg/struct"
+	"github.com/Damian89/yataf/pkg/config"
+	_struct "github.com/Damian89/yataf/pkg/struct"
 	"regexp"
 	"strings"
 )
