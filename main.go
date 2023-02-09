@@ -23,7 +23,7 @@ func main() {
 	Results := analyze.AnalyzeContent(Content, Arguments.Types)
 
 	if len(Results.Result) == 0 {
-		fmt.Println("\033[31m[i] No results found\033[0m\n")
+		fmt.Printf("\033[31m[i] No results found\033[0m\n")
 		os.Exit(1)
 	}
 
