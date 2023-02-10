@@ -80,6 +80,7 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 			{Type: "Urls-Paths", Name: "Urls and paths #19", Matcher: "(?i)new WebSocket\\(`.*?`"}, // <--- see difference here
 			{Type: "Urls-Paths", Name: "Urls and paths #20", Matcher: `(?im)(axios|jquery|instance|http|\$).(get|post|delete|put|ajax)\([a-zA-Z0-9_]+\s*?\+\s*?['|"].*?['|"]`},
 			{Type: "Urls-Paths", Name: "Urls and paths #21", Matcher: `(?im)(axios|jquery|instance|http|\$).(get|post|delete|put|ajax)\(['|"]\/.*?\s*?\+\s*?[a-zA-Z0-9_]+\s*?\+\s*?['|"]`},
+			{Type: "Urls-Paths", Name: "Urls and paths #22", Matcher: `(?i)(path|pathname|file)\s*?(:|=)\s*?['|"]\/.*?['|"]`},
 		},
 	}
 
