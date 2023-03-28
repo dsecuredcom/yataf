@@ -9,8 +9,8 @@ func TestAnalyzeContent(t *testing.T) {
 
 	Config := map[string]map[string]int{
 		"../../tests/1.test": {
-			"Results":     1,
-			"Extractions": 13,
+			"Results":     14,
+			"Extractions": 14,
 		},
 		// more to come :P
 	}
@@ -26,8 +26,8 @@ func TestAnalyzeContent(t *testing.T) {
 			t.Errorf("Expected %d results, got %d", ResultsCount, len(Analyzed.Result))
 		}
 
-		if len(Analyzed.Result[0].DataExtracted) != ExtractionsCount {
-			t.Errorf("Expected %d extractions, got %d", ExtractionsCount, len(Analyzed.Result[0].DataExtracted))
+		if len(Analyzed.Result) != ExtractionsCount {
+			t.Errorf("Expected %d extractions, got %d", ExtractionsCount, len(Analyzed.Result))
 		}
 	}
 }

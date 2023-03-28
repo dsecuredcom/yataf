@@ -26,3 +26,5 @@ var password = "secretW0rd"
 return this.http.get(xi_fvApi + "/production-line-schedule/" + r + "/event",
 
 return this.http.get("/production-line-schedule/" + r + "/event",
+
+,this.passwd= "secretKeyT0K1ngd0m"

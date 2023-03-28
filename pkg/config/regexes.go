@@ -55,6 +55,8 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 			{Type: "Credentials", Name: "Credentials in module.exports", Matcher: `(?im)module.exports\s*?=\s*?.*{\s*?.*?(admin|secret|password|credentials).*?\s*?}`},
 			{Type: "Credentials", Name: "Escaped credentials", Matcher: `(?im)\\['|"](admin|user|client|users|)[_\.]?(pass|password|passwd|secret|credentials|token)\\['|"]\s*?:\s*?\\['|"].*?\\['|"]`},
 			{Type: "Credentials", Name: "Potential credentials in html table", Matcher: `(?i)<td>.*?(password|secret|token|keyfile|passwd|credentials|admin).*?</td>`},
+			{Type: "Credentials", Name: "Credentials with \"this.\" prepended", Matcher: `(?i)this\.(apikey|secret|password|token|passwd|credentials|access_key|secret_key|pwd|appsecret|app_secret)\s*?=\s*?['|"].*?['|"]`},
+
 			{Type: "Urls-Paths", Name: "Cloudinary", Matcher: `cloudinary://.*`},
 			{Type: "Urls-Paths", Name: "Firebase URL", Matcher: `[a-zA-Z0-9-]+\.firebaseio\.com`},
 			{Type: "Urls-Paths", Name: "Urls and paths #1", Matcher: `(?i)[a-zA-Z]\.(get|post|fetch|patch|delete|option|put|ajax)\((\s*?)['|"][a-zA-Z0-9-_\/:\?]['|"]`},
