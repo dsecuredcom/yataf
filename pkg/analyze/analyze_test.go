@@ -9,8 +9,8 @@ func TestAnalyzeContent(t *testing.T) {
 
 	Config := map[string]map[string]int{
 		"../../tests/1.test": {
-			"Results":     14,
-			"Extractions": 14,
+			"Results":     16,
+			"Extractions": 16,
 		},
 		// more to come :P
 	}

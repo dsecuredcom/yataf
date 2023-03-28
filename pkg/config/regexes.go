@@ -56,6 +56,7 @@ func GetRegExConfig(Types []string) _struct.RegExConfig {
 			{Type: "Credentials", Name: "Escaped credentials", Matcher: `(?im)\\['|"](admin|user|client|users|)[_\.]?(pass|password|passwd|secret|credentials|token)\\['|"]\s*?:\s*?\\['|"].*?\\['|"]`},
 			{Type: "Credentials", Name: "Potential credentials in html table", Matcher: `(?i)<td>.*?(password|secret|token|keyfile|passwd|credentials|admin).*?</td>`},
 			{Type: "Credentials", Name: "Credentials with \"this.\" prepended", Matcher: `(?i)this\.(apikey|secret|password|token|passwd|credentials|access_key|secret_key|pwd|appsecret|app_secret)\s*?=\s*?['|"].*?['|"]`},
+			{Type: "Credentials", Name: "API Tokens with high entropy", Matcher: `(?i)token:\s*?['|"][a-zA-Z0-9]+['|"]`},
 
 			{Type: "Urls-Paths", Name: "Cloudinary", Matcher: `cloudinary://.*`},
 			{Type: "Urls-Paths", Name: "Firebase URL", Matcher: `[a-zA-Z0-9-]+\.firebaseio\.com`},
