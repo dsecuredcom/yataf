@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/Damian89/yataf/pkg/analyze"
-	"github.com/Damian89/yataf/pkg/fetch"
-	"github.com/Damian89/yataf/pkg/general"
+	"github.com/dsecuredcom/yataf/pkg/analyze"
+	"github.com/dsecuredcom/yataf/pkg/fetch"
+	"github.com/dsecuredcom/yataf/pkg/general"
 	"os"
 	"strings"
 )

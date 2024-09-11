@@ -1,7 +1,7 @@
 package analyze
 
 import (
-	"github.com/Damian89/yataf/pkg/fetch"
+	"github.com/dsecuredcom/yataf/pkg/fetch"
 	"testing"
 )
 

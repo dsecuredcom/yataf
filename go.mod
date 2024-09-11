@@ -1,3 +1,3 @@
-module github.com/Damian89/yataf
+module github.com/dsecuredcom/yataf
 
 go 1.19

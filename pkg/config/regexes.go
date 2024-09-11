@@ -1,7 +1,7 @@
 package config
 
 import (
-	_struct "github.com/Damian89/yataf/pkg/struct"
+	_struct "github.com/dsecuredcom/yataf/pkg/struct"
 	"strings"
 )
 
